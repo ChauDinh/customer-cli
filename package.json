@@ -1,0 +1,24 @@
+{
+  "name": "customer-cli",
+  "version": "1.0.0",
+  "description": "A custom cli using node.js and mongodb",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChauDinh/customer-cli.git"
+  },
+  "author": "Chau Dinh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChauDinh/customer-cli/issues"
+  },
+  "homepage": "https://github.com/ChauDinh/customer-cli#readme",
+  "dependencies": {
+    "commander": "^2.19.0",
+    "inquirer": "^6.2.1",
+    "mongoose": "^5.4.5"
+  }
+}
