@@ -3,8 +3,8 @@ const mongoose = require("mongoose");
 
 // Customer Schema
 const customerSchema = mongoose.Schema({
- firstName: { type: String },
- lastName: { type: String },
+ firstname: { type: String },
+ lastname: { type: String },
  phone: { type: String },
  email: { type: String }
 });
