@@ -15,7 +15,7 @@ const Customer = require("./Model/customer");
 const addCustomer = customer => {
  Customer.create(customer).then(customer => {
   console.info("New Customer Added...");
-  db.close();
+  //db.close();
  })
 }
 
@@ -27,11 +27,42 @@ const findCustomer = name => {
   .then(customer => {
    console.info(customer);
    console.info(`${customer.length} matches`);
-   db.close();
+   //db.close();
+  })
+}
+
+// Update Customer
+const updateCustomer = (_id, customer) => {
+ Customer.update({ _id }, customer)
+  .then(customer => {
+   console.info("Customer updated");
+   //db.close();
+  });
+};
+
+// Remove customer
+const removeCustomer = _id => {
+ Customer.remove({ _id })
+  .then(customer => {
+   console.info("Customer removed!");
+   //db.close();
+  });
+};
+
+// List all customers
+const listCustomer = () => {
+ Customer.find()
+  .then(customers => {
+   console.ingo(customers);
+   console.info(`${customers.length} matches`);
+   //db.close();
   })
 }
 
 module.exports = {
  addCustomer,
- findCustomer
+ findCustomer,
+ updateCustomer,
+ removeCustomer,
+ listCustomer
 };
